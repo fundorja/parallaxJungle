@@ -12,7 +12,7 @@ let sec = document.querySelector(".sec")
 window.addEventListener("scroll", function () {
   let value = window.scrollY
 
-  body.style.backdropFilter = "brightness(" + (1.5 + value * -0.002) + ")"
+  body.style.backdropFilter = "saturate(" + (1 + value * 0.04) + ")"
 
   text.style.top = 50 + value * -0.5 + "%"
   text.style.transform = "scale(" + (0.1 + value * 0.01) + ")"
@@ -25,7 +25,7 @@ window.addEventListener("scroll", function () {
   //   bird2.style.transform = "scale(" + (0.1 + value * 0.03) + ")"
 
   //   btn.style.marginTop = 150 + value * 1.5 + "px"
-  btn.style.transform = "translateY(" + (100 + value * 0.4) + "px)scale(" + (1 + value * -0.001) + ")"
+  btn.style.transform = "translateY(" + (-150 + value * 1.2) + "px)scale(" + (1.2 + value * -0.0015) + ")"
 
   rocks.style.top = value * -0.2 + "px"
   rocks.style.transform = "scale(" + (1 + value * 0.0005) + ")"
