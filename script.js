@@ -1,3 +1,4 @@
+let body = document.querySelector("body")
 let text = document.querySelector("#text")
 let bird1 = document.querySelector("#bird1")
 let bird2 = document.querySelector("#bird2")
@@ -10,6 +11,8 @@ let sec = document.querySelector(".sec")
 
 window.addEventListener("scroll", function () {
   let value = window.scrollY
+
+  body.style.backdropFilter = "brightness(" + (1.5 + value * -0.002) + ")"
 
   text.style.top = 50 + value * -0.5 + "%"
   text.style.transform = "scale(" + (0.1 + value * 0.01) + ")"
