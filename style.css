@@ -11,13 +11,13 @@ body {
   min-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  background: white;
+  background: linear-gradient(0deg, rgba(255, 145, 0, 0.7) 60%, rgba(0, 191, 255, 0.3) 100%);
 }
 header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding: 30px 100px;
   display: flex;
   justify-content: space-between;
@@ -81,12 +81,14 @@ section img {
 }
 section #text {
   position: absolute;
+  top: 50%;
   color: rgb(0, 84, 99);
   font-size: 10vw;
   text-align: center;
   line-height: 0.55em;
   font-family: "Rancho", cursive;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
+  text-shadow: 0 0 2px white;
 }
 section #text span {
   font-size: 0.2em;
@@ -96,13 +98,14 @@ section #text span {
 #btn {
   display: inline-block;
   padding: 8px 30px;
-  background: rgb(255, 217, 0);
+  background: rgb(255, 255, 255);
   color: rgb(0, 84, 99);
   font-size: 1.2em;
   font-weight: 500;
   letter-spacing: 2px;
   border-radius: 99px;
-  transform: translateY(100px);
+  transform: translateY(100px) scale(1);
+  box-shadow: 0 0 10px rgb(0, 84, 99);
 }
 .sec {
   position: relative;
@@ -119,6 +122,15 @@ section #text span {
   color: white;
   margin-bottom: 10px;
 }
-#bird2 {
-  z-index: 15;
+section #bird1 {
+  z-index: -1;
+  top: 70px;
+  left: -350px;
+  transform: scale(0.8);
+}
+section #bird2 {
+  z-index: -1;
+  top: 280px;
+  left: 250px;
+  transform: scale(0.6);
 }

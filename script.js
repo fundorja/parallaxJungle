@@ -12,16 +12,17 @@ window.addEventListener("scroll", function () {
   let value = window.scrollY
 
   text.style.top = 50 + value * -0.5 + "%"
-  text.style.transform = "scale(" + (1 + value * 0.001) + ")"
+  text.style.transform = "scale(" + (0.1 + value * 0.01) + ")"
 
-  bird1.style.top = value * -1.5 + "px"
-  bird1.style.left = value * 2 + "px"
+  bird1.style.top = 70 + value * -1.5 + "px"
+  bird1.style.left = -350 + value * 2 + "px"
 
-  bird2.style.top = value * 4 + "px"
-  bird2.style.left = value * -0.5 + "px"
-  bird2.style.transform = "scale(" + (1 + value * 0.01) + ")"
+  bird2.style.top = 280 + value * -1 + "px"
+  bird2.style.left = 250 + value * -1 + "px"
+  //   bird2.style.transform = "scale(" + (0.1 + value * 0.03) + ")"
 
-  btn.style.marginTop = value * 1.5 + "px"
+  //   btn.style.marginTop = 150 + value * 1.5 + "px"
+  btn.style.transform = "translateY(" + (100 + value * 0.4) + "px)scale(" + (1 + value * -0.001) + ")"
 
   rocks.style.top = value * -0.2 + "px"
   rocks.style.transform = "scale(" + (1 + value * 0.0005) + ")"
